@@ -1,0 +1,33 @@
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0px auto;
+}
+
+.flex-box {
+  display: flex;
+  outline: 1px solid red;
+}
+
+.item {
+  border: 1px solid gray;
+  background-color: bisque;
+  width: 150px;
+  height: 60px;
+  margin: 20px;
+  list-style: none;
+ 
+}
+
+/* flex-grow: */
+.item-3 {
+  flex-grow: 3;
+
+  border: 1px solid gray;
+  background-color: bisque;
+  width: 150px;
+  height: 60px;
+  margin: 20px;
+  list-style: none;
+}
