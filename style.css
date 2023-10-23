@@ -1,33 +1,194 @@
-.container {
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin: 0px auto;
+body {
+  background-color: antiquewhite;
+  font-size: 24px;
+  font-weight: 500px;
+  color: brown;
+
+  text-align: center;
 }
 
-.flex-box {
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+
+}
+
+.link:focus,
+.link:hover {
+  color: blue;
+}
+
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid teal;
+}
+
+.current {
+  color: red;
+}
+
+.menu-list {
   display: flex;
-  outline: 1px solid red;
+}
+
+.menu-list>.item {
+  margin-right: 60px;
+}
+
+.section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.text {
+  text-align: start;
+  color: black;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* flex-grow */
+.flex-grow {
+  display: flex;
+
+}
+
+.flex-grow :nth-child(2) {
+  flex-grow: 2;
+}
+
+.blok-grow {
+  display: flex;
+  min-width: 200px;
+  justify-content: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  color: wheat;
+  flex-grow: 1;
+}
+
+/* flex-shrink */
+.flex-shrink {
+  font-family: monospace;
+  color: #fff;
+  border: 2px solid #ddd;
+  display: flex;
+  height: 250px;
+  width: 500px;
+}
+
+.flex-shrink>div {
+  padding: 56px 0;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  flex-basis: 200px;
+}
+
+.gold {
+  background-color: gold;
+  flex-shrink: 1;
+}
+
+.red {
+  background-color: red;
+  flex-shrink: 10;
+}
+
+.blue {
+  background-color: steelblue;
+  flex-shrink: 3;
+}
+
+/* order */
+.holder {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  min-width: 200px;
+  width: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 2px solid;
+  overflow: hidden;
+  font-weight: bold;
 }
 
 .item {
-  border: 1px solid gray;
-  background-color: bisque;
-  width: 150px;
-  height: 60px;
-  margin: 20px;
-  list-style: none;
- 
+  display: flex;
+  justify-content: center;
+  padding: 20px 10px;
+  box-sizing: border-box;
 }
 
-/* flex-grow: */
-.item-3 {
-  flex-grow: 3;
-
-  border: 1px solid gray;
-  background-color: bisque;
-  width: 150px;
-  height: 60px;
-  margin: 20px;
-  list-style: none;
+.holder :nth-child(1) {
+  background-color: rgb(232, 84, 30);
+  order: 1;
+  width: 50%;
 }
+
+.holder :nth-child(2) {
+  background-color: rgb(24, 119, 235);
+  order: 4;
+  width: calc(100% / 3);
+}
+
+.holder :nth-child(3) {
+  background-color: rgb(219, 30, 232);
+  order: 3;
+  width: calc(100% / 3);
+}
+
+.holder :nth-child(4) {
+  background-color: rgb(50, 232, 30);
+  order: 5;
+  width: calc(100% / 3);
+}
+
+.holder :nth-child(5) {
+  background-color: rgb(232, 175, 30);
+  order: 2;
+  width: 50%;
+}
+
+/* Техніка grids */
+/* .grids {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.grids>.item {
+  flex-basis: calc((100% - 30px) / 3);
+} */

@@ -3,23 +3,103 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css" />
   <link rel="stylesheet" href="./style.css">
+  <title>Властивості flex-елементів</title>
 </head>
 
 <body>
-  <div class="container">
-    <ul class="flex-box">
-      <li class="item">1</li>
-      <li class="item">2</li>
-      <li class="item-3">3</li>
-      <li class="item">4</li>
-      <li class="item">5</li>
-    </ul>
-  </div>
+  <header class="header">
+    <div class="container">
+      <ul class="menu-list">
+        <li class="item"><a href="./flex-box.html" class="link">Головна</a></li>
+        <li class="item"><a href="./index.html" class="link current">Властивості flex-елементів</a></li>
+        <li class="item"><a href="./grids.html" class="link">Техніка grids — cітка елементів</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container">
+      <h1>Властивості flex-елементів</h1>
+      <!-- flex-basis -->
+      <p class="text">
+        <i style="color: blue;">flex-basis</i>​ визначає початковий розмір елемента перед розподілом вільного
+        простору.
+        <a href="https://codepen.io/MichaelBondar/pen/prRPdj" target="_blank">Приклад</a>
+      </p>
+
+      <!-- flex-grow -->
+      <p class="text">
+        <i style="color: blue;">flex-grow</i>​ ​ визначає здатність елемента, у разі потреби, займати більше
+        місця (рости), ніж його початковий розмір.
+        <br>
+        За замовчуванню у всіх елементів встановлено значення 0,
+        <br>
+        якщо у всіх елементів встановлено однакове значення цієї властивості, то вони займуть
+        однакову кількість місця в контейнері.
+        <br>
+        А ось, якщо всім задати значення 1, а одному елементу 2, то він спробує зайняти в
+        два рази більше
+        місця, ніж будь-який інший елемент.
+        <br>
+        якщо всі flex-блоки всередині контейнера мають flex-grow: 1, то вони будуть одинакового розміру. Якщо
+        один з них має
+        flex-grow: 2, то він буде вдвічі більшим, за всі інші
+      </p>
+      <div class="flex-grow">
+        <div class="blok-grow" style="background-color: blue;">1</div>
+        <div class="blok-grow" style="background-color: green;">2</div>
+        <div class="blok-grow" style="background-color: red;">3</div>
+        <div class="blok-grow" style="background-color: teal;">4</div>
+      </div>
+
+
+      <!-- flex-shrink -->
+      <p class="text">
+        <i style="color: blue;">flex-shrink</i>​ ​ Визначає здатність елемента, у разі потреби, займати менше
+        місця (стискатися), ніж його початковий розмір. Значення
+        задається як пропорція (частка).
+        <br>
+        За замовчуванням у всіх елементів встановлено значення 1, тобто елементи будуть стискатися у разі
+        потреби. Від'ємні
+        значення задавати не можна. Використовується досить рідко.
+      </p>
+
+      <div class="flex-shrink">
+        <div class="gold">flex-shrink: 1</div>
+        <div class="red">flex-shrink: 10</div>
+        <div class="blue">flex-shrink: 3</div>
+      </div>
+
+      <!-- align-self -->
+      <p class="text">
+        <i style="color: blue;">align-self</i>​ ​Дозволяє елементу змінити своє положення на поперечній осі,
+        перевизначивши для себе значення властивості align-items від
+        контейнера. Аналогу для головної осі не існує, елемент може змістити себе тільки на поперечній осі.
+        <a class="link" href="https://codepen.io/goit-academy/pen/MWKdZZV" target="_blank">Приклад</a>
+      </p>
+
+
+      <!-- order -->
+      <p class="text">
+        <i style="color: blue;">order</i>​За замовчуванням елементи розташовуються у тому порядку, в якому вони
+        вказані в HTML-файлі. Використовуючи властивість
+        order можна візуально змінити порядок розташування елементів вздовж головної осі. При цьому, в HTML-коді
+        нічого не
+        зміниться.
+      </p>
+      <div class="holder">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
