@@ -183,12 +183,22 @@ img {
 }
 
 /* Техніка grids */
-/* .grids {
+.grids {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  /* gap: 30px; */
+
+  padding-left: 0px;
+  justify-content: center;
+
+  margin-right: -65px;
+  margin-top: -130px;
 }
 
 .grids>.item {
-  flex-basis: calc((100% - 30px) / 3);
-} */
+  margin-right: 65px;
+  margin-top: 130px;
+  flex-basis: calc((100% - 120px) / 3);
+
+  /* flex-basis: calc((100% - 60px) / 4); */
+}
